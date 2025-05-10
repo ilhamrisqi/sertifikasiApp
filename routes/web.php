@@ -1,5 +1,5 @@
 <?php
-// File: routes/web.php
+
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
@@ -8,6 +8,10 @@ use App\Http\Controllers\MedicineController;
 use App\Http\Controllers\MedicalEquipmentController;
 use App\Http\Controllers\ConsumableController;
 
+
+
+
+Route::redirect('', '/login');
 
 // Auth routes
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
